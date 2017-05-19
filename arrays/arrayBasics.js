@@ -47,3 +47,22 @@ var str = arr.join(';');
 
 var str = "тест";
 alert( str.split('') ); // т,е,с,т
+
+arr.forEach(function(item, i, arr) {
+  alert( i + ": " + item + " (массив:" + arr + ")" );
+});
+
+var positiveArr = arr.filter(function(number) {
+  return number > 0;
+});
+
+var nameLengths = names.map(function(name) {
+  return name.length;
+});
+
+var result = arr.reduce(function(sum, current) {
+  return sum + current;
+}, 0);
+
+alert( arr.every(isPositive) ); // false, не все положительные
+alert( arr.some(isPositive) ); // true, есть хоть одно положительное
